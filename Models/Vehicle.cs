@@ -7,6 +7,7 @@ namespace API_Service.Models;
 public class Vehicle
 {
     [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     [Column("id")]
     public int Id {get; set;}
 
@@ -24,4 +25,13 @@ public class Vehicle
 
     [Column("Color")]
     public string? Color {get; set;}
+
+    public Vehicle(string? Make,string? Model,int Year,double Price,string? Color)
+    {
+        this.Make = Make;
+        this.Model = Model;
+        this.Year = Year;
+        this.Price = Price;
+        this.Color = Color;
+    }
 }

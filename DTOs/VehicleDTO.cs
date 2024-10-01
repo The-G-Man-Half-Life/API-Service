@@ -21,6 +21,6 @@ public class VehicleDTO
 
     [Required(ErrorMessage = "El color es obligatorio")]
     [StringLength(30, ErrorMessage = "El color no puede exceder los 30 caracteres.")]
-    public string? color {get; set;}
+    public string? Color {get; set;}
 
 }
